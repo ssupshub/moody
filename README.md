@@ -2,11 +2,11 @@
 
 # Mood-Based Music Suggestion Website
 
-Welcome to the **Mood-Based Music Suggestion Website**! This web application helps users find music recommendations based on their current mood. Choose your mood (happy, sad, energetic, relaxed, etc.), and the app will suggest songs accordingly.
+Welcome to the **Mood-Based Music Suggestion Website**! This web application helps users find music recommendations based on their current mood. Whether you're feeling happy, sad, energetic, or relaxed, the app will suggest songs that match your emotions.
 
 ## Features
 
-* **Mood Selection**: Choose from a set of predefined moods.
+* **Mood Selection**: Choose from a set of predefined moods (happy, sad, energetic, etc.).
 * **Music Recommendations**: Get curated music suggestions based on the selected mood.
 * **Responsive UI**: The design adjusts to different screen sizes for an optimal experience.
 
@@ -14,8 +14,8 @@ Welcome to the **Mood-Based Music Suggestion Website**! This web application hel
 
 * **Frontend**:
 
-  * **TypeScript**: For writing strongly-typed, maintainable code.
-  * **HTML**: For the structure of the web pages.
+  * **TypeScript**: Used for writing strongly-typed, maintainable code.
+  * **HTML**: For structuring the web pages.
   * **CSS**: For styling the web pages and making them responsive.
 * **Backend**:
 
@@ -29,10 +29,10 @@ To run this project locally, follow the instructions below.
 
 Before you begin, make sure you have the following installed on your machine:
 
-* **[Node.js](https://nodejs.org/)**: A JavaScript runtime environment used for the frontend.
-* **[Java JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)**: The Java Development Kit is required for the backend.
-* **[Maven](https://maven.apache.org/)**: A build automation tool for Java projects.
-* **[Git](https://git-scm.com/)**: To clone the repository.
+* **[Node.js](https://nodejs.org/)**: JavaScript runtime environment for the frontend.
+* **[Java JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)**: Java Development Kit for the backend.
+* **[Maven](https://maven.apache.org/)**: Build automation tool for Java projects.
+* **[Git](https://git-scm.com/)**: For cloning the repository.
 
 You can check if you have these installed by running:
 
@@ -133,27 +133,7 @@ cd mood-music-suggestions
 
    **Note**: The frontend will communicate with this backend to fetch mood-based music recommendations.
 
-### Environment Variables
 
-Make sure to set any necessary environment variables for the backend (e.g., API keys, database URLs). You can create a `.env` file in the root directory or use your system's environment variable management.
-
-Example:
-
-```bash
-MUSIC_API_KEY=your_music_api_key_here
-DATABASE_URL=your_database_url_here
-```
-
-The backend should be configured to use these variables for music data retrieval.
-
-### Running Both Frontend and Backend
-
-Once the frontend and backend are both running, your website should be fully functional.
-
-* **Frontend**: Running on `http://localhost:3000`.
-* **Backend**: Running on `http://localhost:8080` (or another port if configured differently).
-
-The frontend will automatically make requests to the backend to fetch music recommendations based on the user's selected mood.
 
 ### Testing
 
@@ -177,7 +157,4 @@ We welcome contributions! Here's how you can get involved:
 5. **Push** your changes to your fork.
 6. Create a **pull request** with a clear description of the changes.
 
-
-
 ---
-
