@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --joy-color: #8b5cf6;
+  --sad-color: #3b82f6;
+  --angry-color: #ef4444;
+  --fear-color: #84cc16;
+  --neutral-color: #6b7280;
+  
+  /* New gradient variables */
+  --gradient-happy: linear-gradient(135deg, #FF6B6B, #FFE66D);
+  --gradient-sad: linear-gradient(135deg, #4A90E2, #67B26F);
+  --gradient-angry: linear-gradient(135deg, #ED4264, #FFEDBC);
+  --gradient-fearful: linear-gradient(135deg, #834D9B, #D04ED6);
+  --gradient-neutral: linear-gradient(135deg, #8E2DE2, #4A00E0);
+}
+
+@layer base {
+  body {
+    @apply m-0 font-sans antialiased;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-purple-500/25;
+  }
+
+  .btn-secondary {
+    @apply bg-white/10 backdrop-blur-lg text-white border border-white/20 hover:bg-white/20;
+  }
+
+  .card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl 
+           hover:shadow-purple-500/10 transition-all duration-500 overflow-hidden;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl;
+  }
+
+  .mood-indicator {
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-2xl 
+           transition-all duration-500 transform hover:scale-110;
+  }
+
+  .mood-happy { background: var(--gradient-happy); }
+  .mood-sad { background: var(--gradient-sad); }
+  .mood-angry { background: var(--gradient-angry); }
+  .mood-fearful { background: var(--gradient-fearful); }
+  .mood-neutral { background: var(--gradient-neutral); }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .pulse-animation {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-500/30 rounded-full hover:bg-purple-500/50;
+}
